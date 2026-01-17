@@ -1,0 +1,108 @@
+/* Main background */
+.stApp {
+    background: #012C4E;
+    color: #f0e7d5;
+}
+
+
+/* Text input */
+input {
+    background-color: #EAD292  !important;
+    opacity: 0.8 !important;
+    color: rgb(0, 0, 0) !important;
+    border-radius: 10px;
+}
+
+
+
+/* Buttons */
+button {
+    background-color: #EAD292 !important;
+    color: black !important;
+    border-width: 50px;
+    border-radius: 10px !important;
+    font-weight: bold;
+}
+button:hover {
+    background-color: #D4B24C !important;
+    color: black !important;
+}
+button:active {
+    background-color: #ce9804 !important;
+    color: rgb(12, 12, 12) !important;
+}
+
+/* Alert box */
+div[data-testid="stAlert"] {
+    border-radius: 8px !important;
+    background-color: #000000;
+    color: #fff0ff !important;
+}
+
+/* Classification report */
+.classification-report {
+    font-size: 11px;
+    line-height: 1.2;
+    font-family: monospace;
+    white-space: pre;
+}
+.classification-report {
+    font-size: 11px;
+    line-height: 1.2;
+    font-family: monospace;
+    white-space: pre;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #EAD292 
+} 
+
+/* Sidebar metrics*/
+.metric-container {
+    display: flex;
+    gap: 10px; 
+    flex-wrap: wrap; 
+    background-color: #EAD292
+}
+.metricA , .metricF {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+.metricA {
+ color: rgb(70, 70, 245);
+}
+.metricF {
+ color: rgb(0, 0, 0);
+}
+
+/* Expander container */
+.stExpander {
+    background-color: #EAD292 !important;  /* expander background */
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+/* Input box */
+[data-testid="stTextInput"] input::placeholder {
+    color: #050505 !important;
+    opacity: 0.7;
+}
+
+[data-testid="stTextInput"] input {
+    color: #ffffff;
+    background-color: #2C3E50; 
+}
+
+[data-testid="stTextInput"] label span {
+    color: #ffffff;     
+    font-size: 25px !important;     
+    font-weight: bold;    
+    margin-bottom: 15px;  
+}
