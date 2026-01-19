@@ -240,6 +240,15 @@ class MathSolver:
         deriv = sp.diff(expr,var)
         steps.append(f"Differentiated: {expr_to_text(deriv)}")
         return steps,deriv
+    
+    def solve_simplification(self, expr):
+        steps = []
+        steps.append(f"Original expression: {expr_to_text(expr)}")
+        simplified = sp.simplify(expr)
+        if simplified != expr:
+            steps.append(f"Simplified: {expr_to_text(simplified)}")
+        return steps, simplified
+
 
 
 # ===============================
@@ -289,6 +298,9 @@ class MathTutorAgent:
         if detected_type == "derivative":
             steps, solution = self.solver.solve_derivative(expr, sp.symbols('x'))
             final_type = "derivative"
+        elif detected_type == "expression":
+            steps, solution = self.solver.solve_simplification(expr)
+            final_type = "simplification"
         else:
             var = detect_variable(expr)
             if var is None:
